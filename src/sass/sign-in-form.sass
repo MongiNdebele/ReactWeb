@@ -1,0 +1,101 @@
+.input-text
+    font-family: 'Volte Medium' !important
+
+.additional-text
+    color: rgb(60, 60, 0) !important
+
+.other-text
+    font-family: 'Volte Regular' !important
+    color: rgb(113,113 ,113 )
+
+.line-and-or
+    margin-right: 4
+    margin-block-start: 4 
+
+.full-screen-cards
+  height: 100vh
+  display: flex
+  flex-wrap: wrap
+  align-items: stretch
+
+.custom-left-height-col
+  height: 40vh
+
+  @media (min-width: 768px) // For tablets and up
+    height: 40vh
+
+  @media (min-width: 992px) // For laptops and up
+    height: 100vh
+
+.full-height-col
+  height: 100vh
+  align-items: stretch
+  height: 60vh // Default height for smaller screens (phones and tablets)
+
+  @media (min-width: 768px) // For tablets and up
+    height: 60vh
+
+  @media (min-width: 992px) // For laptops and up
+    height: 100vh
+
+.custom-button
+  background-color: rgb(255,205,69) !important
+  border-color: rgb(255,205,69) !important
+  font-size: large !important
+
+.button
+  background-color: rgb(232,232 ,232 ) !important
+  font-size: large !important
+
+.card
+  flex-direction: column
+  align-items: center
+  justify-content: start
+  background-color: #f9f9f9
+  border-color: #f9f9f9
+
+  @media (min-width: 768px)
+    justify-content: center
+    border-color: #f9f9f9
+  
+  @media (min-width: 992px)
+    justify-content: center
+  .card-body
+    width: 90%
+    
+    @media ( min-width: 768 px)
+      width: 75%
+      //height: 
+
+    @media ( min-width: 992px )
+      width: 75%
+      //height: 
+
+  .card-title
+    //font-family: 'Volte Semibold'
+    font-size: larger
+    //font-weight: 900
+    @media ( min-width: 768 )
+      //height: 
+      font-size: xx-large
+
+    @media ( min-width: 992px )
+      //height: 
+      font-size: xxx-large
+  
+  .card-text
+    font-weight: 300
+    //font-family: 'Volte Semibold'
+    //font-size: large
+
+  .card-img
+    object-fit: cover
+    width: 100%
+    height: 100%
+
+  .card-img-overlay
+    //background: rgba(0, 0, 0, 0.5) // Semi-transparent overlay
+    color: white
+    display: flex
+    flex-direction: column
+    justify-content: center
