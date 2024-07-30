@@ -1,5 +1,7 @@
+import Image from "next/image";
 import React, { use } from "react";
 import { Card, Button, Row, Col } from "react-bootstrap";
+import { FaEye } from "react-icons/fa";
 
 const SignIn: React.FC = () => {
   return (
@@ -16,22 +18,28 @@ const SignIn: React.FC = () => {
               placeholder="email.email@mail.com"
             />
           </div>
-          <div className="mb-4">
+          <div className="mb-4 input-group">
             <input
               type="password"
               className="form-control input-text" // p-3
               id="exampleInputPassword1"
               placeholder="*********************"
             />
+            <button type="button" id="toggle-password" className="toggle-password">
+            <FaEye />
+            </button>
           </div>
-          <button type="submit" className="btn w-100 custom-button"> 
+          <a href="http://localhost:3000/landingpage" className="btn w-100 custom-button" role="button" aria-disabled="false">Sign in</a>
+{/*           <button type="submit" className="btn w-100 custom-button">
             Sign in
-          </button> 
-          <Row className=" align-items-center justify-content-around">
-            <Col className="border-top " ></Col>
-            <Col className="col-1 text-nowrap other-text ">or</Col>
-            <Col className="border-top "></Col>
-          </Row>
+          </button> */}
+          <div>
+            <Row className=" align-items-center justify-content-around mx-12">
+              <Col className="border-top "></Col>
+              <Col className="col-1 text-nowrap other-text ">or</Col>
+              <Col className="border-top "></Col>
+            </Row>
+          </div>
           <Row className="mb-4">
             <Col>
               <button type="submit" className="p-2 btn w-100 button">
@@ -45,7 +53,10 @@ const SignIn: React.FC = () => {
             </Col>
           </Row>
           <div className="additional-text container text-center text-nowrap">
-            Don't have an account? <a href="#" color="#3c3c00" >Sign up</a>
+            Don't have an account?{" "}
+            <a href="#" color="#3c3c00">
+              Sign up
+            </a>
           </div>
         </form>
       </Card.Body>
