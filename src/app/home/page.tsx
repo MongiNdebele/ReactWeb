@@ -3,6 +3,7 @@ import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import SignIn from '@/components/start/signincard';
 import Pineapple from '@/components/start/pineapplecard';
+import SignInPhone from '@/components/start/signinphone';
 import { Row, Col } from 'react-bootstrap';
 
 export default function page() {

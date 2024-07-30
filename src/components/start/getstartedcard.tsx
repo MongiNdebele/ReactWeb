@@ -11,7 +11,7 @@ const GetStarted: React.FC = () => {
             </Card.Text>
             <Button variant="primary" className="my-3">Get Started</Button>
             <Card.Text>
-              Already have an account? Sign in here.
+              Already have an account? <a href="http://localhost:3000/home" className="link-underline-opacity-0">Sign in</a>
             </Card.Text>
           </Card.Body>
         </Card>
