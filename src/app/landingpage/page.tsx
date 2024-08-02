@@ -34,7 +34,7 @@ function Example() {
         onHide={handleClose}
         scroll={true}
         backdrop={false}
-        className={`${styles.offcanvas} w-25`}
+        className={`${styles.offcanvas}`}
       >
         <Offcanvas.Body>
           <div className="d-flex justify-content-between align-items-center my-3">
@@ -49,15 +49,14 @@ function Example() {
           <ListMenu activeTab={activeTab} setActiveTab={setActiveTab} />
           <hr />
           <TagsMenu />
-          <Settings />
         </Offcanvas.Body>
-        
+        <Settings />
       </Offcanvas>
-      <div className={`${styles.maincontent} `}>
+      <div className={`${styles.maincontent} ${show ? styles.shifted : ""}`}>
         {activeTab === "Upcoming" && <Upcoming />}
         {activeTab === "Today" && <Today />}
         {activeTab === "Calendar" && <Calendar />}
-        {activeTab === "Sticky Wall" && <StickyWall isShifted={show}/>}
+        {activeTab === "Sticky Wall" && <StickyWall isShifted={show} />}
       </div>
     </div>
   );

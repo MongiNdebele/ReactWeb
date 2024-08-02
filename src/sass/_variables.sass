@@ -1,22 +1,35 @@
 $main-app-width: 100%
 $main-app-height: 100%
 
+// Content Container
+
+$app-content-width: calc($main-app-width - 3.2308%)
+$app-content-height: calc($main-app-width - 5.5215%)
+
+$app-side: calc(3.2308% / 2)
+$app-top: calc(5.1533% / 2)
+
 //OffCanvas Dimensions
 
-$OffCanvas-width: calc($main-app-width - 3.2308%) 
-$OffCanvas-height: calc($main-app-height - 5.5215%) 
+$OffCanvas-width: calc(($main-app-width - 77%))
+$OffCanvas-height: $app-content-height
 
+// Sticky note dimensions
 
+$note-width: calc(($main-app-width - 78.0769%) * 100)
+$note-height: $note-width
 
-$spacer: 1rem
+// Sticky note container dimensions
 
-$spacers: (
-    0: 0,
-    6: $spacer * 4,
-    7: $spacer * 5,
-    8: $spacer * 6,
-    9: $spacer * 7,
-   10: $spacer * 8,
-);
+$note-container-width: (($main-app-width - 26.8%) )
+$note-container-height: (($main-app-height - 25%))
 
+// Header Shift Dimensions
+$left-shift: calc($OffCanvas-width + $app-side)
+
+//Sticky Note Container Shift Dimensions
+$sticky-note-left-shift: calc($left-shift + $app-side + 5rem)
+$sticky-note-top-shift: 3vw
+
+$test: calc($note-container-width * 5)
 
