@@ -1,18 +1,27 @@
+@import '../_variables'
+
 .stickywallContainer
     display: flex
+    padding-left: 1.3%
+    padding-top: 1.5%
     //background-color: rgba(254, 242, 3, 0.617) !important
     border-radius: 5px
     //border-color: #ebebeb !important
     position: relative
     transition: all 0.4s ease
     width: 100% // full width initially
-    height: 91%
+    height: 100%
     //transition: width 0.3s ease, marginLeft 0.3s ease
     
 
     &.shift
-        transform: translateX(362px) // shift left by the off-canvas width
-        width: calc(100% - 350px) // new width is the remaining space
+        transform: translateX($sticky-note-left-shift) // shift left by the off-canvas width
+        width: $note-container-width
+        height: $note-container-height
+        margin-left: 1.5385%
+        padding-bottom: 1.35%
+        //padding: 2.6%
+        //width: calc(100% - 350px) // new width is the remaining space
         border: 1.5px solid #ebebeb // Add a 2px solid border (change color and width as needed)
         box-sizing: border-box // Ensure the border is included in the element's width
         //border-color: rgb(207, 56, 56) !important
@@ -24,9 +33,12 @@
     //background-color: rgba(33, 186, 31, 0.5) !important
     flex-wrap: wrap
     transition: margin-right 0.4s ease
+    margin-right: 8vw
+    margin-bottom: 2.5vh
 
     &.shifts
-       margin-right: 4rem 
+        margin-left: .5vw
+        margin-right: 10vw
 
 .stickynotetitle
     size: 4rem !important
@@ -34,6 +46,7 @@
 .stickynotecontent
     font-family: 'Lexend Light' !important
     color: rgb(60,60,60)
+    font-size: small
 
 .noteCard
     display: flex
@@ -41,8 +54,6 @@
     align-items: start
     font-family: 'Lexend Medium'
     border-radius: 5px
-    width: 22rem
-    height: 22rem
     color: #333
     background-color: unset
 
@@ -51,8 +62,13 @@
         width: 30rem */
 
     @media ( min-width:  992px)
-        max-height: 19rem
-        max-width: 19rem
+        height: 22vw
+        width: 22vw
+
+        &.shiftted
+            height: 20vw
+            width: 20vw
+
         
 
     &.bg-yellow
@@ -74,8 +90,8 @@
 .addNoteCard
     border-color: rgb(232, 232, 232)
     background-color: rgb(232, 232, 232)
-    width: 22rem
-    height: 22rem
+    width: 22vw
+    height: 22vw
     display: flex
 
     .addNote
@@ -87,6 +103,12 @@
         width: 30rem */
 
     @media ( min-width:  992px)
-        height: 19rem
-        width: 19rem
+        height: 22vw
+        width: 22vw
+
+        &.shiftts
+            height: 20vw
+            width: 20vw
+
+
     
