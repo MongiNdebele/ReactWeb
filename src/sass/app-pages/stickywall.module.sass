@@ -1,0 +1,92 @@
+.stickywallContainer
+    display: flex
+    //background-color: rgba(254, 242, 3, 0.617) !important
+    border-radius: 5px
+    //border-color: #ebebeb !important
+    position: relative
+    transition: all 0.4s ease
+    width: 100% // full width initially
+    height: 91%
+    //transition: width 0.3s ease, marginLeft 0.3s ease
+    
+
+    &.shift
+        transform: translateX(362px) // shift left by the off-canvas width
+        width: calc(100% - 350px) // new width is the remaining space
+        border: 1.5px solid #ebebeb // Add a 2px solid border (change color and width as needed)
+        box-sizing: border-box // Ensure the border is included in the element's width
+        //border-color: rgb(207, 56, 56) !important
+        //border: show
+        //margin-left: 350px !important
+        //width: calc(100% - 22.5%) 
+
+.stickynotecolumn
+    //background-color: rgba(33, 186, 31, 0.5) !important
+    flex-wrap: wrap
+    transition: margin-right 0.4s ease
+
+    &.shifts
+       margin-right: 4rem 
+
+.stickynotetitle
+    size: 4rem !important
+
+.stickynotecontent
+    font-family: 'Lexend Light' !important
+    color: rgb(60,60,60)
+
+.noteCard
+    display: flex
+    justify-content: start
+    align-items: start
+    font-family: 'Lexend Medium'
+    border-radius: 5px
+    width: 22rem
+    height: 22rem
+    color: #333
+    background-color: unset
+
+    /*  @media ( min-width:  768px)
+        height: min-content
+        width: 30rem */
+
+    @media ( min-width:  992px)
+        max-height: 19rem
+        max-width: 19rem
+        
+
+    &.bg-yellow
+        background-color: rgb(254, 239, 174) !important
+        border-color: rgb(254, 239, 174) !important
+
+    &.bg-blue
+        background-color: rgb(202,231,234) !important
+        border-color: rgb(202,231,234) !important
+
+    &.bg-warning
+        background-color: rgb(255,212,213) !important
+        border-color: rgb(255,212,213) !important
+
+    &.bg-danger
+        background-color: rgb(255, 205, 162) !important
+        border-color: rgb(255, 205, 162) !important
+
+.addNoteCard
+    border-color: rgb(232, 232, 232)
+    background-color: rgb(232, 232, 232)
+    width: 22rem
+    height: 22rem
+    display: flex
+
+    .addNote
+        font-size: 5rem
+        color: rgb(30, 33, 36)
+    
+    /*     @media ( min-width:  768px)
+        height: max-content
+        width: 30rem */
+
+    @media ( min-width:  992px)
+        height: 19rem
+        width: 19rem
+    

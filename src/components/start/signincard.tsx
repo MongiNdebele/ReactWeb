@@ -25,19 +25,36 @@ const SignIn: React.FC = () => {
               id="exampleInputPassword1"
               placeholder="*********************"
             />
-            <button type="button" id="toggle-password" className="toggle-password">
-            <FaEye />
+            <button
+              type="button"
+              id="toggle-password"
+              className="toggle-password"
+            >
+              <FaEye />
             </button>
           </div>
-          <a href="http://localhost:3000/landingpage" className="btn w-100 custom-button" role="button" aria-disabled="false">Sign in</a>
-{/*           <button type="submit" className="btn w-100 custom-button">
+          <a
+            href="http://localhost:3000/landingpage"
+            className="btn w-100 custom-button"
+            role="button"
+            aria-disabled="false"
+          >
+            Sign in
+          </a>
+          {/*           <button type="submit" className="btn w-100 custom-button">
             Sign in
           </button> */}
           <div>
-            <Row className=" align-items-center justify-content-around mx-12">
-              <Col className="border-top "></Col>
-              <Col className="col-1 text-nowrap other-text ">or</Col>
-              <Col className="border-top "></Col>
+            <Row className="d-flex align-items-center justify-content-between ">
+              <Col>
+                <hr />
+              </Col>
+              <Col className="col-1  text-nowrap other-text ">
+                <div className="d-flex justify-content-center">or</div>
+              </Col>
+              <Col>
+                <hr />
+              </Col>
             </Row>
           </div>
           <Row className="mb-4">
