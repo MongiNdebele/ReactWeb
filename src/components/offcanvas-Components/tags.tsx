@@ -6,7 +6,7 @@ const TagsMenu = () => {
   return (
     <>
       <h1 className={`${styles.headings} mx-3`}>TAGS</h1>
-      <div className="d-flex flex-row align-items-center">
+      <div className="d-flex flex-row flex-wrap align-items-center">
         <button type="button" className={`d-flex justify-content-center btn ${style.customlistbutton} ${style.tag1} me-1`}>
           <div>Tag 1</div>
         </button>

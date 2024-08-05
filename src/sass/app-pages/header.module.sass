@@ -1,12 +1,21 @@
 @import '../_variables'
-  
+@import '../_tabletvariables'
+
 .header
   //margin-top: 1rem
   transition: all 0.4s ease
+  //justify-content: space-between
+  @media (min-width: 768px) and (max-width: 992px)
+    margin-top: $tabapp-top
 
   &.shifted
-    margin-left: calc($OffCanvas-width - 3vw)
-  
+
+    @media (min-width: 768px) and (max-width: 992px)
+      margin-left: $tabOffCanvas-width
+
+    @media (min-width: 992px)
+      margin-left: calc($OffCanvas-width - 3vw)
+
 .screenheading
   align-self: center
   font-family: 'Lexend Medium'
@@ -21,3 +30,48 @@
 
   &.shiftburger
     visibility: hidden
+
+.canvasburgerbutton
+
+  @media (min-width: 768px) and (max-width: 992px)
+    visibility: hidden
+
+.backbutton
+  color: rgb(124,124,124)
+  border: none !important
+  background-color: transparent
+  position: absolute
+
+  @media (max-width: 768px)
+    visibility: hidden
+
+  @media (min-width: 992px)
+    visibility: hidden
+
+
+.plusicon
+  @media (max-width: 768px)
+    color: rgb(68,68,68)
+
+  @media (min-width: 768px) and (max-width: 992px)
+    color: rgb(124,124,124)
+    align-self: center
+    position: absolute
+    right: 3vw
+
+  @media (min-width: 992px)
+    display: none
+
+.badge
+  //background-color: pink
+  align-self: center
+  padding: 5px
+  margin-bottom: 9px
+  width: 4rem
+  color: rgb(34,37,41)
+  border-color: rgb(113, 113, 113)
+  margin-left: 2rem
+  border-radius: 0.25rem
+  font-family: 'Lexend Regular'
+  font-size: 3rem
+  //display: inline-block

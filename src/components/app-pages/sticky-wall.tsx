@@ -19,7 +19,7 @@ const StickyWall = ({isShifted}) => {
     <div className={` ${styles.stickywallContainer} ${isShifted? styles.shift: ""}`}>
       <Row className=''>
         {notes.map((note, index) => (
-          <Col md={4} lg={2} className={`${styles.stickynotecolumn} ${isShifted? styles.shifts: ""}`} key={index}>
+          <Col md={7} lg={2} className={`${styles.stickynotecolumn} ${isShifted? styles.shifts: ""}`} key={index}>
             <Card className={`${styles.noteCard} ${styles[note.color]} ${isShifted? styles.shiftted: ""}`}>
                 <h3 className={`ms-4 mt-4 mb-3 ${styles.stickynotetitle}`}>{note.title}</h3>
                 <div >
@@ -30,7 +30,7 @@ const StickyWall = ({isShifted}) => {
             </Card>
           </Col>
         ))}
-        <Col md={4} lg={3} className={`${styles.stickynotecolumn} ${isShifted? styles.shifts: ""}`}>
+        <Col md={5} lg={3} className={`${styles.stickynotecolumn} ${isShifted? styles.shifts: ""} ${styles.tablet}`}>
           <Card className={`${styles.addNoteCard} ${isShifted? styles.shiftts: ""}`}>
             <Card.Body className="d-flex justify-content-center align-items-center">
               <div className={styles.addNote}><AiOutlinePlus /></div>

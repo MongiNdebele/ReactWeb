@@ -79,6 +79,7 @@ const ListMenu = ({ activeTab, setActiveTab }) => {
             </Badge>
           </div>
         </ListGroup.Item>
+        <hr className={style.hrline}/>
         {/* Item 4 */}
         <ListGroup.Item action className={styles.customlistitem}>
           <div className="d-flex w-100 align-items-center">
