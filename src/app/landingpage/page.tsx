@@ -14,6 +14,7 @@ import TagsMenu from "@/components/offcanvas-Components/tags";
 import Header from "@/components/app-pages/header";
 import Settings from "@/components/offcanvas-Components/settings";
 import { TfiMenu } from "react-icons/tfi";
+import { AiOutlineMenuFold } from "react-icons/ai";
 
 function Example() {
   const [show, setShow] = useState(false);
@@ -28,6 +29,7 @@ function Example() {
         activeScreen={activeTab}
         handleShow={handleShow}
         isShifted={show}
+        activeTab={activeTab}
       />
       <Offcanvas
         show={show}
@@ -39,15 +41,17 @@ function Example() {
         <Offcanvas.Body>
           <div className="d-flex justify-content-between align-items-center my-3">
             <div className={styles.ofcanvasmenutitle}>Menu</div>
-            <button onClick={handleClose} className={style.burgerbutton}>
-              <TfiMenu size={20} />
+            <button onClick={handleClose} className={`${style.burgerbutton}`}>
+              <AiOutlineMenuFold size={20} className={style.backbutton} />
+              <TfiMenu size={20} className={style.canvasburgerbutton}/>
             </button>
           </div>
           <SearchInput />
           <OffcanvasMenu activeTab={activeTab} setActiveTab={setActiveTab} />
-          <hr />
+          <hr className={styles.hr}/>
           <ListMenu activeTab={activeTab} setActiveTab={setActiveTab} />
-          <hr />
+          <hr className={styles.hrline2}/>
+          <br />
           <TagsMenu />
         </Offcanvas.Body>
         <Settings />

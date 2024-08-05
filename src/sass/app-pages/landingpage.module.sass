@@ -1,44 +1,58 @@
 @import '../_variables'
+@import '../_tabletvariables'
   
 .appcontainer
   display: flex
   flex-direction: column
   //background-color: rgb(206, 206, 78)
-  padding-top: $app-side
-  margin-left: $app-side
-  margin-right: $app-side
-  //padding-left: 100px
+
+  @media (min-width: 992px)
+    padding-top: $app-side
+    margin-left: $app-side
+    margin-right: $app-side
 
 .ofcanvasmenutitle
   font-family: 'Lexend SemiBold' !important
   font-size: 1.5rem !important
 
 .offcanvas
-  background-color: rgb(242,242,242) !important
+  background-color: rgb(244,244,244) !important
   border-radius: 10px !important
-  border-color: rgb(242,242,242) !important
-  margin-top: $app-side
-  margin-left: $app-side
-  height: $OffCanvas-height
-  width: $OffCanvas-width !important
+  border-color: rgb(244,244,244) !important
+
+  @media (min-width: 768px)
+    width: $tabOffCanvas-width !important
+    height: $tabOffCanvas-height 
+    margin-left: $tabapp-left
+    margin-top: $tabapp-top
+  
+  @media (min-width: 992px)
+    height: $OffCanvas-height
+    width: $OffCanvas-width !important
+    margin-top: $app-side
+    margin-left: $app-side
 
   //@media (min-width: 992px)
     
-
 .maincontent
   //margin-top: $sticky-note-top-shift
   //height: 100vh
   //padding: 30px
   //margin-left: 3.5rem
-  transition: all 0.4s ease
-  animation: both
   //transition: margin-left 0.4s ease
   //background-color: rgb(255, 149, 225)
+  transition: all 0.4s ease
+  animation: both
 
   &.shifted
-    margin-top: $sticky-note-top-shift
-    //margin-left: 25rem !important
-    //width: calc(100% - 22.5%) 
-    //height: calc(100% - 22.5%)
 
+    @media (min-width: 992px)
+      margin-top: $sticky-note-top-shift
 
+.hr
+  color: rgb(113, 113, 113) !important
+
+.hrline2
+  @media (min-width: 768px) and (max-width: 992px)
+    display: none
+    color: rgb(113, 113, 113)
