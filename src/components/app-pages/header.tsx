@@ -22,7 +22,7 @@ const Header = ({ activeScreen, handleShow, isShifted, activeTab }) => {
         <TfiMenu size={20} className={styles.canvasburgerbutton} />
       </button>
       <div>
-        <h1 className={`${styles.screenheading} border`}>{activeScreen}</h1>
+        <h1 className={`${styles.screenheading} `}>{activeScreen}</h1>
       </div>
         {activeTab === "Sticky Wall" || activeTab === "Calendar" ? (
           <FaPlus size={20} className={styles.plusicon} />
