@@ -2,6 +2,7 @@ import React from 'react';
 import { Card, Row, Col } from 'react-bootstrap';
 import styles from '../../sass/app-pages/stickywall.module.sass'
 import { AiOutlinePlus } from "react-icons/ai";
+import {fetchNotes, addNote} from "@/services/notesService"
 
 
 
