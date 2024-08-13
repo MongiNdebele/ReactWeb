@@ -19,13 +19,13 @@ const Header = ({ activeScreen, handleShow, isShifted, activeTab }) => {
         } `}
       >
         <AiOutlineMenuFold size={20} className={styles.backbutton} />
-        <TfiMenu size={20} className={styles.canvasburgerbutton} />
+        <TfiMenu className={styles.canvasburgerbutton} />
       </button>
       <div>
         <h1 className={`${styles.screenheading} `}>{activeScreen}</h1>
       </div>
         {activeTab === "Sticky Wall" || activeTab === "Calendar" ? (
-          <FaPlus size={20} className={styles.plusicon} />
+          <FaPlus className={styles.plusicon} />
         ) : (
           <Badge className={`${styles.badge} border`}>5</Badge> // Customize badge text as needed
         )}
