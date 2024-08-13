@@ -1,0 +1,36 @@
+.fullscreencards
+  height: 100vh
+  display: flex
+  flex-wrap: wrap
+  align-items: stretch
+
+.customleftheightcol
+  height: 40vh
+
+  @media (min-width: 768px) // For tablets and up
+    height: 40vh
+
+  @media (min-width: 992px) // For laptops and up
+    height: 100vh
+
+.fullheightcol
+  //height: 100vh
+  align-items: stretch
+  height: 60vh // Default height for smaller screens (phones and tablets)
+
+  @media (min-width: 768px) // For tablets and up
+    height: 60vh
+
+  @media (min-width: 992px) // For laptops and up
+    height: 100vh
+
+.custombutton
+  background-color: rgb(255,205,69) !important
+  border-color: rgb(255,205,69) !important
+  font-size: medium !important
+  cursor: pointer
+
+.signintext
+  color: rgb(60, 60, 60) !important
+  text-decoration: none // Remove the underline
+  cursor: pointer

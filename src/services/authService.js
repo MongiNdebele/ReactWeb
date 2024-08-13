@@ -20,7 +20,8 @@ export async function login(email, password) {
   const data = await response.json();
   // Store token in local storage
   localStorage.setItem("authToken", data.token);
-  return data;
+
+  return { userId: data.userId, token: data.token };
 }
 
 export async function Registration(email, password) {
@@ -56,6 +57,7 @@ export async function Registration(email, password) {
     throw new Error("Expected JSON response but received non-JSON content.");
   }
 }
+
 
 export async function fetchUserData() {
   const token = localStorage.getItem("authToken");
